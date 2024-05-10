@@ -11,11 +11,18 @@ npm install react-native-rn-gauge-gradient
 ## Usage
 
 ```js
-import { multiply } from 'react-native-rn-gauge-gradient';
+import GaugeGradient from 'react-native-rn-gauge-gradient';
 
 // ...
 
-const result = await multiply(3, 7);
+<GaugeGradient
+    size={200}
+    min={0}
+    max={100}
+    value={70}
+    showText
+    textValue="70%"
+/>
 ```
 
 ## Contributing
@@ -26,6 +33,4 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 MIT
 
----
 
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

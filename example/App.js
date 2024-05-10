@@ -4,7 +4,14 @@ import GaugeGradient from '../src/components/GaugeGradient';
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <GaugeGradient size={150} min={50} max={100} value={74} showText />
+      <GaugeGradient
+        size={200}
+        min={0}
+        max={100}
+        value={70}
+        showText
+        textValue="70%"
+      />
     </SafeAreaView>
   );
 };
