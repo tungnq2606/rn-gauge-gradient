@@ -1,6 +1,6 @@
 {
   "name": "rn-gauge-gradient",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "RN Gauge ",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
