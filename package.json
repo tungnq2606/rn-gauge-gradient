@@ -1,5 +1,5 @@
 {
-  "name": "react-native-rn-gauge-gradient",
+  "name": "rn-gauge-gradient",
   "version": "0.1.0",
   "description": "RN Gauge ",
   "main": "lib/commonjs/index",
@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-rn-gauge-gradient-example",
+    "example": "yarn workspace rn-gauge-gradient-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -41,14 +41,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tungnq2606/react-native-rn-gauge-gradient.git"
+    "url": "git+https://github.com/tungnq2606/rn-gauge-gradient.git"
   },
   "author": "quoctung <tungnq2606@gmail.com> (https://github.com/tungnq2606)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tungnq2606/react-native-rn-gauge-gradient/issues"
+    "url": "https://github.com/tungnq2606/rn-gauge-gradient/issues"
   },
-  "homepage": "https://github.com/tungnq2606/react-native-rn-gauge-gradient#readme",
+  "homepage": "https://github.com/tungnq2606/rn-gauge-gradient#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
