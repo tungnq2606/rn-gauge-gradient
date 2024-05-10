@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {Path} from 'react-native-svg';
+import { Path } from 'react-native-svg';
 
 const CIRCLE = Math.PI * 2;
 
@@ -37,8 +37,8 @@ function makeArcPath(x, y, startAngleArg, endAngleArg, radius, direction) {
 
   return `M${x + radius * (1 + startSine)} ${y + radius - radius * startCosine}
           A${radius} ${radius} 0 ${arcFlag} ${reverseFlag} ${
-    x + radius * (1 + endSine)
-  } ${y + radius - radius * endCosine}`;
+            x + radius * (1 + endSine)
+          } ${y + radius - radius * endCosine}`;
 }
 
 export default class Arc extends Component {
@@ -57,7 +57,7 @@ export default class Arc extends Component {
 
   static defaultProps = {
     startAngle: 0,
-    offset: {top: 0, left: 0},
+    offset: { top: 0, left: 0 },
     strokeCap: 'butt',
     strokeWidth: 0,
     direction: 'clockwise',
@@ -81,7 +81,7 @@ export default class Arc extends Component {
       startAngle,
       endAngle,
       radius - strokeWidth / 2,
-      direction,
+      direction
     );
 
     return (
