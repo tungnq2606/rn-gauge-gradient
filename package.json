@@ -37,7 +37,11 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "gauge",
+    "gradient",
+    "rn-gauge-gradient",
+    "rn-gauge"
   ],
   "repository": {
     "type": "git",
