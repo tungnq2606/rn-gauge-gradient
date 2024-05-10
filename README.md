@@ -1,6 +1,8 @@
-# react-native-rn-gauge-gradient
+# rn-gauge-gradient
 
-RN Gauge 
+
+<img src="src/assets/preview.png" width="236" height="510">
+<img src="src/assets/preview.gif" width="236" height="510">
 
 ## Installation
 
