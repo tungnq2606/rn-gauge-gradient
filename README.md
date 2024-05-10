@@ -5,13 +5,17 @@ RN Gauge
 ## Installation
 
 ```sh
-npm install react-native-rn-gauge-gradient
+npm install rn-gauge-gradient
+```
+OR
+```sh
+yarn add rn-gauge-gradient
 ```
 
 ## Usage
 
 ```js
-import GaugeGradient from 'react-native-rn-gauge-gradient';
+import GaugeGradient from 'rn-gauge-gradient';
 
 // ...
 
