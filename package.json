@@ -1,6 +1,6 @@
 {
   "name": "rn-gauge-gradient",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "RN Gauge ",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -26,7 +26,6 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace rn-gauge-gradient-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",

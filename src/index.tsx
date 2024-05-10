@@ -1,1 +1,3 @@
-export { default as GaugeGradient } from './components/GaugeGradient';
+import GaugeGradient from '../src/components/GaugeGradient';
+
+export default GaugeGradient;

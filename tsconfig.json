@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-rn-gauge-gradient": ["./src/index"]
+      "react-native-rn-gauge-gradient": ["./src/index"],
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

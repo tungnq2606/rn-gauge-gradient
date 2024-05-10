@@ -1,8 +1,8 @@
 import { Animated, StyleSheet, View } from 'react-native';
 import React, { useMemo } from 'react';
+import { Svg } from 'react-native-svg';
 // @ts-ignore
 import Arc from './shapes/Arc';
-import { Svg } from 'react-native-svg';
 import withAnimation from '../withAnimation';
 
 export type HalfCircleProgressProps = {
