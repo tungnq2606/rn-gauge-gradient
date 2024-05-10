@@ -49,7 +49,7 @@ const GaugeGradient = ({
   }, [gradient, progress]);
 
   return (
-    <>
+    <View style={styles.container}>
       <HalfCircleGradient
         textColor={textColor || progressColor}
         size={currentSize}
@@ -74,13 +74,17 @@ const GaugeGradient = ({
           fill={'transparent'}
         />
       </View>
-    </>
+    </View>
   );
 };
 
 export default GaugeGradient;
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   halfCircleProgress: {
     position: 'absolute',
   },
