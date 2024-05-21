@@ -3,7 +3,7 @@ import {
   View,
   Dimensions,
   type StyleProp,
-  type ViewStyle,
+  type TextStyle,
 } from 'react-native';
 import React, { useMemo } from 'react';
 import HalfCircleGradient from './HalfCircleGradient';
@@ -23,7 +23,7 @@ type Props = {
   showText?: boolean;
   textValue?: string;
   textColor?: string;
-  textStyle?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
 };
 const { width } = Dimensions.get('window');
 

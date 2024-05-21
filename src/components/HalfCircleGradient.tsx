@@ -5,6 +5,7 @@ import {
   Text,
   View,
   type ViewStyle,
+  type TextStyle,
 } from 'react-native';
 import React from 'react';
 import { calculateDegree } from '../utils/calculateDegree';
@@ -23,7 +24,7 @@ type Props = {
   showText?: boolean;
   text: string | number;
   textColor?: string;
-  textStyle?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
 };
 
 const HalfCircleGradient = ({
