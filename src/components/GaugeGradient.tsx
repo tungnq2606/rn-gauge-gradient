@@ -1,4 +1,10 @@
-import { StyleSheet, View, Dimensions } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Dimensions,
+  type StyleProp,
+  type ViewStyle,
+} from 'react-native';
 import React, { useMemo } from 'react';
 import HalfCircleGradient from './HalfCircleGradient';
 import HalfCircleProgress from './HalfCircleProgress';
@@ -17,11 +23,12 @@ type Props = {
   showText?: boolean;
   textValue?: string;
   textColor?: string;
+  textStyle?: StyleProp<ViewStyle>;
 };
 const { width } = Dimensions.get('window');
 
 const GaugeGradient = ({
-  gradient = ['#ff2900', '#ff5400', '#f4ab44', '#f2cf1f', '#14eb6e', '#00ff6b'],
+  gradient = ['#00ff6b', '#14eb6e', '#f2cf1f', '#f4ab44', '#ff5400', '#ff2900'],
   size,
   thickness = 30,
   gradientThickness = 10,
@@ -32,6 +39,7 @@ const GaugeGradient = ({
   textValue,
   showText,
   textColor,
+  textStyle,
 }: Props) => {
   const currentSize = validatesGaugeSize(size, width - 20);
 
@@ -57,6 +65,7 @@ const GaugeGradient = ({
         gradient={gradient}
         text={textValue || value}
         showText={showText}
+        textStyle={textStyle}
       />
       <View
         style={[
