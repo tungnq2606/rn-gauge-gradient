@@ -70,7 +70,7 @@ const GaugeGradient = ({
       <View
         style={[
           styles.halfCircleProgress,
-          { bottom: -(currentSize - gradientThickness * 2) / 4 - 1 },
+          { bottom: -(currentSize - gradientThickness * 2) / 4 },
         ]}
       >
         <HalfCircleProgress
