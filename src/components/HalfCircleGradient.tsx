@@ -1,6 +1,5 @@
 import {
   Dimensions,
-  type StyleProp,
   StyleSheet,
   Text,
   View,
@@ -14,17 +13,22 @@ const { width } = Dimensions.get('window');
 const DEGREE = 180;
 
 type Props = {
-  gradient?: Array<string>;
+  gradient?: string[];
   size: number;
   gradientThickness?: number;
-  wrapperStyle?: StyleProp<ViewStyle>;
-  outerCircleStyle?: StyleProp<ViewStyle>;
-  halfCircleStyle?: StyleProp<ViewStyle>;
-  innerCircleStyle?: StyleProp<ViewStyle>;
+  wrapperStyle?: ViewStyle;
+  outerCircleStyle?: ViewStyle;
+  halfCircleStyle?: ViewStyle;
+  innerCircleStyle?: ViewStyle;
   showText?: boolean;
   text: string | number;
   textColor?: string;
-  textStyle?: StyleProp<TextStyle>;
+  textStyle?: TextStyle;
+  min?: number;
+  max?: number;
+  unit?: string;
+  showMinMax?: boolean;
+  minMaxStyle?: TextStyle;
 };
 
 const HalfCircleGradient = ({
@@ -39,6 +43,11 @@ const HalfCircleGradient = ({
   text,
   textColor,
   textStyle,
+  max = 100,
+  min = 0,
+  unit,
+  showMinMax,
+  minMaxStyle,
 }: Props) => {
   const perLevelDegree = calculateDegree(DEGREE, gradient || []);
 
@@ -129,6 +138,16 @@ const HalfCircleGradient = ({
           </View>
         </View>
       </View>
+      {showMinMax && (
+        <View style={styles.minMaxContainer}>
+          <Text
+            style={[styles.minMax, styles.padLeft, minMaxStyle]}
+          >{`${unit ? min + '' + unit : min}`}</Text>
+          <Text
+            style={[styles.minMax, styles.padLeft, minMaxStyle]}
+          >{`${unit ? max + '' + unit : max}`}</Text>
+        </View>
+      )}
     </View>
   );
 };
@@ -172,4 +191,8 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: '#ffffff',
   },
+  minMaxContainer: { flexDirection: 'row', justifyContent: 'space-between' },
+  minMax: { color: 'black', fontSize: 16 },
+  padLeft: { paddingLeft: 4 },
+  padRight: { paddingRight: 4 },
 });

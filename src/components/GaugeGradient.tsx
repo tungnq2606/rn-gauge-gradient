@@ -1,17 +1,11 @@
-import {
-  StyleSheet,
-  View,
-  Dimensions,
-  type StyleProp,
-  type TextStyle,
-} from 'react-native';
+import { StyleSheet, View, Dimensions, type TextStyle } from 'react-native';
 import React, { useMemo } from 'react';
 import HalfCircleGradient from './HalfCircleGradient';
 import HalfCircleProgress from './HalfCircleProgress';
 import { validatesGaugeSize } from '../utils/validatesGaugeSize';
 
 type Props = {
-  gradient?: Array<string>;
+  gradient?: string[];
   size: number;
   thickness?: number;
   gradientThickness?: number;
@@ -23,7 +17,10 @@ type Props = {
   showText?: boolean;
   textValue?: string;
   textColor?: string;
-  textStyle?: StyleProp<TextStyle>;
+  textStyle?: TextStyle;
+  unit?: string;
+  minMaxStyle?: TextStyle;
+  showMinMax?: boolean;
 };
 const { width } = Dimensions.get('window');
 
@@ -40,8 +37,14 @@ const GaugeGradient = ({
   showText,
   textColor,
   textStyle,
+  unit,
+  minMaxStyle,
+  showMinMax = true,
 }: Props) => {
   const currentSize = validatesGaugeSize(size, width - 20);
+  const bottom = (minMaxStyle as TextStyle)?.fontSize
+    ? (minMaxStyle as TextStyle).fontSize
+    : 16;
 
   const progress = (value - min) / (max - min);
   const progressColor = useMemo(() => {
@@ -57,7 +60,14 @@ const GaugeGradient = ({
   }, [gradient, progress]);
 
   return (
-    <View style={styles.container}>
+    <View
+      style={[
+        styles.container,
+        showMinMax && {
+          marginBottom: bottom,
+        },
+      ]}
+    >
       <HalfCircleGradient
         textColor={textColor || progressColor}
         size={currentSize}
@@ -66,6 +76,11 @@ const GaugeGradient = ({
         text={textValue || value}
         showText={showText}
         textStyle={textStyle}
+        showMinMax={showMinMax}
+        min={min}
+        max={max}
+        unit={unit}
+        minMaxStyle={minMaxStyle}
       />
       <View
         style={[
